@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Levels/Easy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Levels/Hard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Levels/Medium.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tank/AnimListener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tank/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tank/Start.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tank/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tank/Tank.java" afterDir="false" />
     </list>
@@ -49,17 +47,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/MSI-/OneDrive/Documents/NetBeansProjects/Tank",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI-/OneDrive/Documents/NetBeansProjects/Tank&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.Easy">
+}</component>
+  <component name="RunManager" selected="Application.Tank">
     <configuration name="Easy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Levels.Easy" />
       <module name="Tank" />
@@ -88,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Easy" />
         <item itemvalue="Application.Tank" />
+        <item itemvalue="Application.Easy" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +163,21 @@
       <option name="project" value="LOCAL؜" />
       <updated>1671823268563</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL؜-٠٠٠١٠" summary="Initial commit">
+      <created>1671828584391</created>
+      <option name="number" value="٠٠٠١٠" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٠" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1671828584391</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠١١" summary="Initial commit">
+      <created>1671828651475</created>
+      <option name="number" value="٠٠٠١١" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١١" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1671828651475</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

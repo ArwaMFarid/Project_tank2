@@ -1,5 +1,4 @@
 package tank;
-import Levels.Easy;
 import com.sun.opengl.util.*;
 import java.awt.*;
 import javax.media.opengl.*;
@@ -9,7 +8,7 @@ import tank.Texture.AnimListener;
 public class Tank extends JFrame {
 
     public static void main(String[] args) {
-        new Tank(new Easy());
+       
     }
     public Tank(AnimListener aListener) {
         GLCanvas glcanvas;
@@ -26,7 +25,7 @@ public class Tank extends JFrame {
 
         setTitle("Anim Test");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(900, 500);
+        setSize(900, 900);
         setLocationRelativeTo(null);
         setVisible(true);
         setFocusable(true);
