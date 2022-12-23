@@ -14,7 +14,7 @@ import tank.Texture.TextureReader;
  */
 public class Start extends AnimListener {
     
-    String textureNames[] = {"Man1.png", "Man2.png", "Man3.png", "Man4.png", "Back.png"};
+    String textureNames[] = {};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
     @Override
