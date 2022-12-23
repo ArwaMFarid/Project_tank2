@@ -4,10 +4,13 @@
  */
 package tank;
 
-import java.awt.event.KeyEvent;
-import javax.media.opengl.GLAutoDrawable;
+import java.awt.event.*;
+import javax.media.opengl.*;
 import tank.Texture.AnimListener;
 import tank.Texture.TextureReader;
+import java.io.IOException;
+import java.util.BitSet;
+import javax.media.opengl.glu.GLU;
 /**
  *
  * @author MSI-
