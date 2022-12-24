@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tank/AnimListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tank/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tank/Start.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tank/Tank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tank/Tank.java" afterDir="false" />
-    </list>
+    <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="Initial commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +172,21 @@
       <option name="project" value="LOCAL؜" />
       <updated>1671828651475</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL؜-٠٠٠١٢" summary="Initial commit">
+      <created>1671881185943</created>
+      <option name="number" value="٠٠٠١٢" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٢" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1671881185943</updated>
+    </task>
+    <task id="LOCAL؜-٠٠٠١٣" summary="Initial commit">
+      <created>1671881480448</created>
+      <option name="number" value="٠٠٠١٣" />
+      <option name="presentableId" value="LOCAL؜-٠٠٠١٣" />
+      <option name="project" value="LOCAL؜" />
+      <updated>1671881480448</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
