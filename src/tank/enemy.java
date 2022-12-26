@@ -9,13 +9,20 @@ public class enemy {
     boolean isAlive;
     boolean collesion;
 
-    public enemy() {
-        x = 20;
+    public enemy(int a) {
+        x = a;
         y = 10;
         isAlive = true;
         collesion =false;
-        direction = random.nextInt(4);
+        direction =  getRandomDirection();
         bulletTrigger = 1;
 
     }
+    static int[] directions = {9, 10, 11, 12};
+
+    public static int getRandomDirection() {
+        int rnd = new Random().nextInt(4);
+        return directions[rnd];
+    }
+
 }

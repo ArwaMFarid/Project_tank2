@@ -22,7 +22,11 @@ public class AnimGLEventListener3 extends AnimListener {
     enum Directions{
         up,down,left,right,up_left,up_right,down_left,down_right
     }
+    enum Directions2{
+        W,S,A,D,W_A,W_D,S_A,S_D
+    }
     Directions direction=Directions.up;// 0=up ,1=right,2=down ,3=left
+    Directions2 direction2=Directions2.W;// 0=up ,1=right,2=down ,3=left
     boolean isDead=false;
 
     int animationIndex = 0;
@@ -89,7 +93,7 @@ public class AnimGLEventListener3 extends AnimListener {
 
 
         DrawSprite(gl, x,y, 1, 0.5f,direction);
-        DrawSprite2(gl, enx,eny, 1, 0.5f,direction);
+        DrawSprite2(gl, enx,eny, 1, 0.5f,direction2);
 
 //        DrawSprite(gl, enx,eny, 7, 1,Directions[getRandomDirection()]);
 
@@ -98,7 +102,7 @@ public class AnimGLEventListener3 extends AnimListener {
                 DrawSprite1(gl, blocks.get(i).x, blocks.get(i).y, 5, .5f);
             }
         }
-        // DrawSprite1(gl, 70, 80, 5, 0.7f);
+//         DrawSprite1(gl, 70, 80, 5, 0.7f);
 //          DrawSprite1(gl, 80, 75, 5, 0.7f);
 //         DrawSprite1(gl, 73, 75, 6, 0.7f);
 //          DrawSprite1(gl, 66, 75, 5, 0.7f);
@@ -176,7 +180,7 @@ public class AnimGLEventListener3 extends AnimListener {
 
                 }
 
-                DrawSprite(gl, bullet.x, bullet.y, 4, 0.3f,Directions.up);
+                DrawSprite(gl, bullet.x, bullet.y, 4, 0.1f,Directions.up);
             }}
 
 
@@ -196,6 +200,7 @@ public class AnimGLEventListener3 extends AnimListener {
         int angle=0;
         switch(dir){
 
+
             case up:angle=0;break;
             case right:angle=-90;break;
             case down:angle=180;break;
@@ -205,7 +210,6 @@ public class AnimGLEventListener3 extends AnimListener {
             case down_right:angle=-135;break;
             case down_left:angle=135;break;
             default:angle=0;
-
         }
 
 
@@ -229,20 +233,20 @@ public class AnimGLEventListener3 extends AnimListener {
 
         gl.glDisable(GL.GL_BLEND);
     }
-    public void DrawSprite2(GL gl, int enx, int eny, int index, float scale,Directions dir1) {
+    public void DrawSprite2(GL gl, int enx, int eny, int index, float scale,Directions2 dir1) {
         gl.glEnable(GL.GL_BLEND);
         gl.glBindTexture(GL.GL_TEXTURE_2D, textures[texture.length-2]);	// Turn Blending On
         int angle=0;
         switch(dir1){
 
-            case up:angle=0;break;
-            case right:angle=-90;break;
-            case down:angle=180;break;
-            case left:angle=90;break;
-            case up_left:angle=45;break;
-            case up_right:angle=-45;break;
-            case down_right:angle=-135;break;
-            case down_left:angle=135;break;
+            case W:angle=0;break;
+            case D:angle=-90;break;
+            case S:angle=180;break;
+            case A:angle=90;break;
+            case W_A:angle=45;break;
+            case W_D:angle=-45;break;
+            case S_D:angle=-135;break;
+            case S_A:angle=135;break;
             default:angle=0;
 
         }
@@ -460,7 +464,7 @@ public class AnimGLEventListener3 extends AnimListener {
             } if ( eny > 0) {
                 eny--;
             }
-            direction=Directions.down_left;
+            direction2=Directions2.S_A;
             animationIndex++;
         }
         else if (isKeyPressed(KeyEvent.VK_D)&&isKeyPressed(KeyEvent.VK_S)) {
@@ -469,7 +473,7 @@ public class AnimGLEventListener3 extends AnimListener {
             }if ( eny > 0) {
                 eny--;
             }
-            direction=Directions.down_right;
+            direction2=Directions2.S_D;
             animationIndex++;
         }
 
@@ -479,7 +483,7 @@ public class AnimGLEventListener3 extends AnimListener {
             } if (enx > 0) {
                 enx--;
             }
-            direction=Directions.up_left;
+            direction2=Directions2.W_A;
             animationIndex++;
         }
 
@@ -489,27 +493,27 @@ public class AnimGLEventListener3 extends AnimListener {
             } if (eny < maxHeight - 10) {
                 eny++;
             }
-            direction=Directions.up_right;
+            direction2=Directions2.W_D;
             animationIndex++;
         }
         else if (isKeyPressed(KeyEvent.VK_S)) {
             if (eny> 0) {
                 eny--;
             }
-            direction=Directions.down;
+            direction2=Directions2.S;
             animationIndex++;
         }
         else   if (isKeyPressed(KeyEvent.VK_W)) {
             if (eny < maxHeight - 10) {
                 eny++;
             }
-            direction=Directions.up;
+            direction2=Directions2.W;
             animationIndex++;}
         else if (isKeyPressed(KeyEvent.VK_D)) {
             if (enx < maxWidth - 10) {
                 enx++;
             }
-            direction=Directions.right;
+            direction2=Directions2.D;
             animationIndex++;
         }
 
@@ -517,7 +521,7 @@ public class AnimGLEventListener3 extends AnimListener {
             if (enx > 0) {
                 enx--;
             }
-            direction=Directions.left;
+            direction2=Directions2.A;
             animationIndex++;
 
         }
