@@ -29,7 +29,7 @@ public class AnimGLEventListener3 extends AnimListener {
     int maxWidth = 100;
     int maxHeight = 100;
     int x = maxWidth -10, y = maxHeight / 99;
-    int enx=0,eny=0;
+    int enx=30,eny=30;
     Directions enmdir=Directions.up;
 
     ArrayList<bullet>bullets=new ArrayList<bullet>();
@@ -88,8 +88,10 @@ public class AnimGLEventListener3 extends AnimListener {
 
 
 
-        DrawSprite(gl, x,y, 1, 1,direction);
-        //    DrawSprite(gl, enx,eny, 7, 1,Directions[getRandomDirection()]);
+        DrawSprite(gl, x,y, 1, 0.5f,direction);
+        DrawSprite2(gl, enx,eny, 1, 0.5f,direction);
+
+//        DrawSprite(gl, enx,eny, 7, 1,Directions[getRandomDirection()]);
 
         for (int i = 0; i < blocks.size(); i++) {
             if (blocks.get(i).isAlive) {
@@ -227,7 +229,45 @@ public class AnimGLEventListener3 extends AnimListener {
 
         gl.glDisable(GL.GL_BLEND);
     }
+    public void DrawSprite2(GL gl, int enx, int eny, int index, float scale,Directions dir1) {
+        gl.glEnable(GL.GL_BLEND);
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[texture.length-2]);	// Turn Blending On
+        int angle=0;
+        switch(dir1){
 
+            case up:angle=0;break;
+            case right:angle=-90;break;
+            case down:angle=180;break;
+            case left:angle=90;break;
+            case up_left:angle=45;break;
+            case up_right:angle=-45;break;
+            case down_right:angle=-135;break;
+            case down_left:angle=135;break;
+            default:angle=0;
+
+        }
+
+
+        gl.glPushMatrix();
+        gl.glTranslated(enx / (maxWidth / 2.0) - 0.9, eny / (maxHeight / 2.0) - 0.9, 0);
+        gl.glScaled(0.1 * scale, 0.1 * scale, 1);
+        gl.glRotated(angle,0, 0, 1);
+        //System.out.println(x +" " + y);
+        gl.glBegin(GL.GL_QUADS);
+        // Front Face
+        gl.glTexCoord2f(0.0f, 0.0f);
+        gl.glVertex3f(-1.0f, -1.0f, -1.0f);
+        gl.glTexCoord2f(1.0f, 0.0f);
+        gl.glVertex3f(1.0f, -1.0f, -1.0f);
+        gl.glTexCoord2f(1.0f, 1.0f);
+        gl.glVertex3f(1.0f, 1.0f, -1.0f);
+        gl.glTexCoord2f(0.0f, 1.0f);
+        gl.glVertex3f(-1.0f, 1.0f, -1.0f);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glDisable(GL.GL_BLEND);
+    }
 
 
 
@@ -413,6 +453,73 @@ public class AnimGLEventListener3 extends AnimListener {
             }
             direction=Directions.left;
             animationIndex++;
+        }
+        else if (isKeyPressed(KeyEvent.VK_A)&&isKeyPressed(KeyEvent.VK_S)) {
+            if (enx > 0) {
+                enx--;
+            } if ( eny > 0) {
+                eny--;
+            }
+            direction=Directions.down_left;
+            animationIndex++;
+        }
+        else if (isKeyPressed(KeyEvent.VK_D)&&isKeyPressed(KeyEvent.VK_S)) {
+            if (enx < maxWidth - 10) {
+                enx++;
+            }if ( eny > 0) {
+                eny--;
+            }
+            direction=Directions.down_right;
+            animationIndex++;
+        }
+
+        else   if (isKeyPressed(KeyEvent.VK_W)&&isKeyPressed(KeyEvent.VK_A)) {
+            if (eny < maxHeight - 10) {
+                eny++;
+            } if (enx > 0) {
+                enx--;
+            }
+            direction=Directions.up_left;
+            animationIndex++;
+        }
+
+        else if (isKeyPressed(KeyEvent.VK_D)&&isKeyPressed(KeyEvent.VK_W)) {
+            if (enx < maxWidth - 10) {
+                enx++;
+            } if (eny < maxHeight - 10) {
+                eny++;
+            }
+            direction=Directions.up_right;
+            animationIndex++;
+        }
+        else if (isKeyPressed(KeyEvent.VK_S)) {
+            if (eny> 0) {
+                eny--;
+            }
+            direction=Directions.down;
+            animationIndex++;
+        }
+        else   if (isKeyPressed(KeyEvent.VK_W)) {
+            if (eny < maxHeight - 10) {
+                eny++;
+            }
+            direction=Directions.up;
+            animationIndex++;}
+        else if (isKeyPressed(KeyEvent.VK_D)) {
+            if (enx < maxWidth - 10) {
+                enx++;
+            }
+            direction=Directions.right;
+            animationIndex++;
+        }
+
+        else   if (isKeyPressed(KeyEvent.VK_A)) {
+            if (enx > 0) {
+                enx--;
+            }
+            direction=Directions.left;
+            animationIndex++;
+
         }
     }
 

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="rehamcode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tank/AnimGLEventListener3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tank/AnimGLEventListener3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
