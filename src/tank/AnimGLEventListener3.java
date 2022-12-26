@@ -37,9 +37,10 @@ public class AnimGLEventListener3 extends AnimListener {
     Directions enmdir=Directions.up;
 
     ArrayList<bullet>bullets=new ArrayList<bullet>();
+    ArrayList<enmbullet>enmbullets=new ArrayList<enmbullet>();
     ArrayList<enemy>enemies=new ArrayList<enemy>();
     // Download enemy textures from https://craftpix.net/freebies/free-monster-2d-game-items/
-    String textureNames[] = {"tank up.png","tank up.png","tank up.png","tank up.png","bullet.png","break_brick.jpg","solid_brick.jpg", "enemy up.png","index.jpg"};
+    String textureNames[] = {"tank up.png","tank up.png","tank up.png","tank up.png","bullet.png","enemy_bullet.png","break_brick.jpg","solid_brick.jpg", "enemy up.png","index.jpg"};
     TextureReader.Texture texture[] = new TextureReader.Texture[textureNames.length];
     int textures[] = new int[textureNames.length];
 
@@ -165,24 +166,85 @@ public class AnimGLEventListener3 extends AnimListener {
 //             DrawSprite1(gl, 30, 40, 13, 1f);
 //              DrawSprite1(gl, 30, 40, 13, 1f);
 //
-        for(bullet bullet:bullets)   {
-            if(bullet.fired){
-                switch(bullet.direction){
+        for(bullet bullet:bullets) {
+            if (bullet.fired) {
+                switch (bullet.direction) {
 
-                    case up:bullet.y++;break;
-                    case right:bullet.x++;break;
-                    case down:bullet.y--;break;
-                    case left:bullet.x--;break;
-                    case up_left:bullet.y++;bullet.x--;break;
-                    case up_right:bullet.y++;bullet.x++;break;
-                    case down_right:bullet.y--;bullet.x++;break;
-                    case down_left:bullet.y--;bullet.x--;break;
+                    case up:
+                        bullet.y++;
+                        break;
+                    case right:
+                        bullet.x++;
+                        break;
+                    case down:
+                        bullet.y--;
+                        break;
+                    case left:
+                        bullet.x--;
+                        break;
+                    case up_left:
+                        bullet.y++;
+                        bullet.x--;
+                        break;
+                    case up_right:
+                        bullet.y++;
+                        bullet.x++;
+                        break;
+                    case down_right:
+                        bullet.y--;
+                        bullet.x++;
+                        break;
+                    case down_left:
+                        bullet.y--;
+                        bullet.x--;
+                        break;
 
                 }
 
-                DrawSprite(gl, bullet.x, bullet.y, 4, 0.1f,Directions.up);
-            }}
+                DrawSprite(gl, bullet.x, bullet.y, 4, 0.1f, Directions.up);
 
+            }
+            for (enmbullet enmbullet : enmbullets) {
+                if (enmbullet.fired) {
+                    switch (enmbullet.direction2) {
+
+                        case W:
+                            enmbullet.eny++;
+                            break;
+                        case D:
+                            enmbullet.enx++;
+                            break;
+                        case S:
+                            enmbullet.eny--;
+                            break;
+                        case A:
+                            enmbullet.enx--;
+                            break;
+                        case W_A:
+                            enmbullet.eny++;
+                            enmbullet.enx--;
+                            break;
+                        case W_D:
+                            enmbullet.eny++;
+                            enmbullet.enx++;
+                            break;
+                        case S_D:
+                            enmbullet.eny--;
+                            enmbullet.enx++;
+                            break;
+                        case S_A:
+                            enmbullet.eny--;
+                            enmbullet.enx--;
+                            break;
+
+                    }
+
+                    DrawSprite2(gl, enmbullet.enx, enmbullet.eny, 5, 0.1f, Directions2.W);
+
+                }
+
+            }
+        }
 
     }
 
@@ -235,7 +297,7 @@ public class AnimGLEventListener3 extends AnimListener {
     }
     public void DrawSprite2(GL gl, int enx, int eny, int index, float scale,Directions2 dir1) {
         gl.glEnable(GL.GL_BLEND);
-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[texture.length-2]);	// Turn Blending On
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[8]);	// Turn Blending On
         int angle=0;
         switch(dir1){
 
@@ -277,7 +339,7 @@ public class AnimGLEventListener3 extends AnimListener {
 
     public void DrawSprite1(GL gl, int x, int y, int index, float scale) {
         gl.glEnable(GL.GL_BLEND);
-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]);	// Turn Blending On
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index+1]);	// Turn Blending On
         int angle=0;
 
 
@@ -386,6 +448,13 @@ public class AnimGLEventListener3 extends AnimListener {
         if(isKeyPressed(KeyEvent.VK_SPACE)){
 
             bullets.add(new bullet(direction,x,y)) ;
+
+
+        }
+
+        if(isKeyPressed(KeyEvent.VK_V)){
+
+            enmbullets.add(new enmbullet(direction2,enx,eny)) ;
 
 
         }
