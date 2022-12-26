@@ -87,6 +87,7 @@ public class AnimGLEventListener3 extends AnimListener {
 
         DrawBackground(gl);
         handleKeyPress();
+        handleKeyPress1();
         animationIndex = animationIndex % 4;
 
 //        DrawGraph(gl);
@@ -94,13 +95,13 @@ public class AnimGLEventListener3 extends AnimListener {
 
 
         DrawSprite(gl, x,y, 1, 0.5f,direction);
-        DrawSprite2(gl, enx,eny, 1, 0.5f,direction2);
+        DrawSprite2(gl, enx,eny, 8, 0.5f,direction2);
 
 //        DrawSprite(gl, enx,eny, 7, 1,Directions[getRandomDirection()]);
 
         for (int i = 0; i < blocks.size(); i++) {
             if (blocks.get(i).isAlive) {
-                DrawSprite1(gl, blocks.get(i).x, blocks.get(i).y, 5, .5f);
+                DrawSprite1(gl, blocks.get(i).x, blocks.get(i).y, 5, 0.5f);
             }
         }
 //         DrawSprite1(gl, 70, 80, 5, 0.7f);
@@ -297,7 +298,7 @@ public class AnimGLEventListener3 extends AnimListener {
     }
     public void DrawSprite2(GL gl, int enx, int eny, int index, float scale,Directions2 dir1) {
         gl.glEnable(GL.GL_BLEND);
-        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[8]);	// Turn Blending On
+        gl.glBindTexture(GL.GL_TEXTURE_2D, textures[index]);	// Turn Blending On
         int angle=0;
         switch(dir1){
 
@@ -441,93 +442,14 @@ public class AnimGLEventListener3 extends AnimListener {
     /*
      * KeyListener
      */
-
-
-    public void handleKeyPress() {
-
-        if(isKeyPressed(KeyEvent.VK_SPACE)){
-
-            bullets.add(new bullet(direction,x,y)) ;
-
-
-        }
-
+    public void handleKeyPress1() {
         if(isKeyPressed(KeyEvent.VK_V)){
 
             enmbullets.add(new enmbullet(direction2,enx,eny)) ;
 
 
         }
-
-
-        if (isKeyPressed(KeyEvent.VK_LEFT)&&isKeyPressed(KeyEvent.VK_DOWN)) {
-            if (x > 0) {
-                x--;
-            } if (y > 0) {
-                y--;
-            }
-            direction=Directions.down_left;
-            animationIndex++;
-        }
-        else if (isKeyPressed(KeyEvent.VK_RIGHT)&&isKeyPressed(KeyEvent.VK_DOWN)) {
-            if (x < maxWidth - 10) {
-                x++;
-            }if (y > 0) {
-                y--;
-            }
-            direction=Directions.down_right;
-            animationIndex++;
-        }
-
-        else   if (isKeyPressed(KeyEvent.VK_UP)&&isKeyPressed(KeyEvent.VK_LEFT)) {
-            if (y < maxHeight - 10) {
-                y++;
-            } if (x > 0) {
-                x--;
-            }
-            direction=Directions.up_left;
-            animationIndex++;
-        }
-
-        else if (isKeyPressed(KeyEvent.VK_RIGHT)&&isKeyPressed(KeyEvent.VK_UP)) {
-            if (x < maxWidth - 10) {
-                x++;
-            } if (y < maxHeight - 10) {
-                y++;
-            }
-            direction=Directions.up_right;
-            animationIndex++;
-        }
-        else if (isKeyPressed(KeyEvent.VK_DOWN)) {
-            if (y > 0) {
-                y--;
-            }
-            direction=Directions.down;
-            animationIndex++;
-        }
-        else   if (isKeyPressed(KeyEvent.VK_UP)) {
-            if (y < maxHeight - 10) {
-                y++;
-            }
-            direction=Directions.up;
-            animationIndex++;
-        }
-        else if (isKeyPressed(KeyEvent.VK_RIGHT)) {
-            if (x < maxWidth - 10) {
-                x++;
-            }
-            direction=Directions.right;
-            animationIndex++;
-        }
-
-        else   if (isKeyPressed(KeyEvent.VK_LEFT)) {
-            if (x > 0) {
-                x--;
-            }
-            direction=Directions.left;
-            animationIndex++;
-        }
-        else if (isKeyPressed(KeyEvent.VK_A)&&isKeyPressed(KeyEvent.VK_S)) {
+        if (isKeyPressed(KeyEvent.VK_A)&&isKeyPressed(KeyEvent.VK_S)) {
             if (enx > 0) {
                 enx--;
             } if ( eny > 0) {
@@ -595,6 +517,79 @@ public class AnimGLEventListener3 extends AnimListener {
 
         }
     }
+
+    public void handleKeyPress() {
+
+        if (isKeyPressed(KeyEvent.VK_SPACE)) {
+
+            bullets.add(new bullet(direction, x, y));
+
+
+        }
+
+        if (isKeyPressed(KeyEvent.VK_LEFT) && isKeyPressed(KeyEvent.VK_DOWN)) {
+            if (x > 0) {
+                x--;
+            }
+            if (y > 0) {
+                y--;
+            }
+            direction = Directions.down_left;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_RIGHT) && isKeyPressed(KeyEvent.VK_DOWN)) {
+            if (x < maxWidth - 10) {
+                x++;
+            }
+            if (y > 0) {
+                y--;
+            }
+            direction = Directions.down_right;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_UP) && isKeyPressed(KeyEvent.VK_LEFT)) {
+            if (y < maxHeight - 10) {
+                y++;
+            }
+            if (x > 0) {
+                x--;
+            }
+            direction = Directions.up_left;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_RIGHT) && isKeyPressed(KeyEvent.VK_UP)) {
+            if (x < maxWidth - 10) {
+                x++;
+            }
+            if (y < maxHeight - 10) {
+                y++;
+            }
+            direction = Directions.up_right;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_DOWN)) {
+            if (y > 0) {
+                y--;
+            }
+            direction = Directions.down;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_UP)) {
+            if (y < maxHeight - 10) {
+                y++;
+            }
+            direction = Directions.up;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_RIGHT)) {
+            if (x < maxWidth - 10) {
+                x++;
+            }
+            direction = Directions.right;
+            animationIndex++;
+        } else if (isKeyPressed(KeyEvent.VK_LEFT)) {
+            if (x > 0) {
+                x--;
+            }
+            direction = Directions.left;
+            animationIndex++;
+        }
+    }
+
 
     public BitSet keyBits = new BitSet(256);
 

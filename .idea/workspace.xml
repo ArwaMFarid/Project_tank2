@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="tank2">
-      <change afterPath="$PROJECT_DIR$/src/tank/enmbullet.java" afterDir="false" />
+    <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="enmbullet2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/enemyBullet.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tank/tank/AnimGLEventListener3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tank/tank/AnimGLEventListener3$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Tank/tank/AnimGLEventListener3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Tank/tank/AnimGLEventListener3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tank/AnimGLEventListener3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tank/AnimGLEventListener3.java" afterDir="false" />
@@ -243,7 +241,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672065797470</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="enmbullet1">
+      <created>1672070106989</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1672070106989</updated>
+    </task>
+    <task id="LOCAL-00020" summary="enmbullet2">
+      <created>1672070179731</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1672070179731</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +275,8 @@
     <MESSAGE value="trycode" />
     <MESSAGE value="try" />
     <MESSAGE value="tank2" />
-    <option name="LAST_COMMIT_MESSAGE" value="tank2" />
+    <MESSAGE value="enmbullet1" />
+    <MESSAGE value="enmbullet2" />
+    <option name="LAST_COMMIT_MESSAGE" value="enmbullet2" />
   </component>
 </project>
