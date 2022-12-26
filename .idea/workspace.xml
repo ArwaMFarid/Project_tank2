@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tank/AnimGLEventListener3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tank/DrowBlocks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tank/bullet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tank/enemy.java" afterDir="false" />
+    <list default="true" id="e40e8444-e970-4098-9853-2665b28238d8" name="Changes" comment="rehamcode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -208,7 +203,21 @@
       <option name="project" value="LOCAL؜" />
       <updated>1671881480448</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Initial commit">
+      <created>1671968557012</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671968557012</updated>
+    </task>
+    <task id="LOCAL-00015" summary="rehamcode">
+      <created>1671968692908</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671968692908</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,7 +233,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="rehamcode" />
+    <option name="LAST_COMMIT_MESSAGE" value="rehamcode" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
